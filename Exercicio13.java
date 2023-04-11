@@ -6,27 +6,25 @@ public class Exercicio13 {
 	
 	public static void  main(String[]args) {
 		
-		Scanner scan = new Scanner(System.in);		
+		Scanner scan = new Scanner(System.in);	
 		
-		String feminino = "f || F"; 
-		String masculino = "m || M"; 
+		System.out.println("Digite M ou m para masculino e F ou f para sexo feminino: ");
+		String sexo = scan.next(); 
+		 
 				
 		System.out.println("Digite sua altura: ");
-		float altura = scan.nextFloat();		
-				
-		double pesoIdealHomens = (72.7 * altura) - 58;
-		double pesoIdealMulheres = (62.1 * altura) - 44.7;
+		float altura = scan.nextFloat();
 		
-		System.out.println("Mulher: peso ideal = " + pesoIdealMulheres);
-		System.out.println("Homens: peso ideal = " + pesoIdealHomens);
+		if (sexo.equalsIgnoreCase("m")) {
+			double pesoIdealHomens = (72.7 * altura) - 58;
+			System.out.println("Homens: peso ideal = " + pesoIdealHomens);
+		} else if (sexo.equalsIgnoreCase("f")) {
+			double pesoIdealMulheres = (62.1 * altura) - 44.7;
+			System.out.println("Mulher: peso ideal = " + pesoIdealMulheres);
+		}
+						
+	
 		
-		
-		System.out.println("Digite sua peso: ");
-		float pesoFeminino = scan.nextFloat();
-		
-		
-
-
 		
 		scan.close();
 		
